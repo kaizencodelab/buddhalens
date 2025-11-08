@@ -7,5 +7,5 @@ FROM nginx:alpine
 # to be in the same directory or a subdirectory.
 COPY . /usr/share/nginx/html
 
-# Expose port 8080, which is the default port Nginx listens on
-EXPOSE 8080
+# Copy the custom Nginx configuration file
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
