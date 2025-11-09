@@ -1,0 +1,577 @@
+{
+  "nodes": [
+    {
+      "id": "samantabhadra",
+      "name": "Samantabhadra",
+      "dob": "Primordial",
+      "occupation": "Dharmakāya Buddha, Ultimate Source"
+    },
+    {
+      "id": "vajrasattva",
+      "name": "Vajrasattva",
+      "dob": "Sambhogakāya",
+      "occupation": "Buddha of Purity"
+    },
+    {
+      "id": "garab-dorje",
+      "name": "Garab Dorje (Prahevajra)",
+      "dob": "Nirmanakāya",
+      "occupation": "First Human Guru of Dzogchen"
+    },
+    {
+      "id": "manjushrimitra",
+      "name": "Mañjuśrīmitra",
+      "dob": "1st-3rd Century",
+      "occupation": "Pandita, Scholar"
+    },
+    {
+      "id": "shri-simha",
+      "name": "Śrī Siṃha",
+      "dob": "c. 299 BCE",
+      "occupation": "Vidyādhara"
+    },
+    {
+      "id": "jhanasutra",
+      "name": "Jñānasūtra",
+      "dob": "c. 1st Millennium",
+      "occupation": "Vidyādhara"
+    },
+    {
+      "id": "padmasambhava",
+      "name": "Guru Padmasambhava",
+      "dob": "8th Century",
+      "occupation": "Founder of Nyingma School"
+    },
+    {
+      "id": "vimalamitra",
+      "name": "Vimalamitra",
+      "dob": "7th-8th Century",
+      "occupation": "Great Pandita, Translator"
+    },
+    {
+      "id": "vairochana",
+      "name": "Vairochana",
+      "dob": "8th Century",
+      "occupation": "Great Translator"
+    },
+    {
+      "id": "trisong-detsen",
+      "name": "King Trisong Detsen",
+      "dob": "742–797 CE",
+      "occupation": "Dharma King of Tibet"
+    },
+    {
+      "id": "yeshe-tsogyal",
+      "name": "Yeshe Tsogyal",
+      "dob": "8th Century",
+      "occupation": "Dakinī, Consort of Padmasambhava"
+    },
+    {
+      "id": "nubchen-sangye",
+      "name": "Nubchen Sangye Yeshe",
+      "dob": "8th-9th Century",
+      "occupation": "Great Tantric Master"
+    },
+    {
+      "id": "longchen-rabjam",
+      "name": "Kunkhyen Longchen Rabjam (Longchenpa)",
+      "dob": "1308–1363",
+      "occupation": "Greatest Dzogchen Master & Scholar"
+    },
+    {
+      "id": "jigme-lingpa",
+      "name": "Rigdzin Jigme Lingpa",
+      "dob": "1729–1798",
+      "occupation": "Terton (Treasure Revealer of Longchen Nyingthig)"
+    },
+    {
+      "id": "jigme-gyalwe-nyugu",
+      "name": "Jigme Gyalwe Nyugu",
+      "dob": "1765–1843",
+      "occupation": "Primary Lineage Holder of Longchen Nyingthig"
+    },
+    {
+      "id": "patrul-rinpoche",
+      "name": "Dza Patrul Rinpoche",
+      "dob": "1808–1887",
+      "occupation": "Renowned Scholar and Author"
+    },
+    {
+      "id": "jamyang-khyentse-w",
+      "name": "Jamyang Khyentse Wangpo",
+      "dob": "1820–1892",
+      "occupation": "Founder of the Rime (non-sectarian) movement, Nyingma/Sakya master"
+    },
+    {
+      "id": "jamgon-mipham",
+      "name": "Jamgon Mipham Rinpoche",
+      "dob": "1846–1912",
+      "occupation": "Great Nyingma Scholar and Writer"
+    },
+    {
+      "id": "lungtok-tenpai-nyima",
+      "name": "Nyoshul Lungtok Tenpai Nyima",
+      "dob": "1829–1901",
+      "occupation": "Foremost Disciple of Patrul Rinpoche"
+    },
+    {
+      "id": "ngawang-palsang",
+      "name": "Khenchen Ngawang Palsang",
+      "dob": "Unknown",
+      "occupation": "Khenchen (Great Abbot), Lineage Holder"
+    },
+    {
+      "id": "dudjom-rinpoche",
+      "name": "Dudjom Rinpoche (Jigdral Yeshe Dorje)",
+      "dob": "1904–1987",
+      "occupation": "Major Terton of the 20th Century"
+    },
+    {
+      "id": "dilgo-khyentse",
+      "name": "Dilgo Khyentse Rinpoche",
+      "dob": "1910–1991",
+      "occupation": "Scholar, Master of All Four Schools"
+    },
+    {
+      "id": "chatralwa-rinpoche",
+      "name": "Chatralwa Sangye Dorje Rinpoche",
+      "dob": "1913–2015",
+      "occupation": "Key Dzogchen Master"
+    },
+    {
+      "id": "jigme-phuntsok",
+      "name": "Khenpo Jigme Phuntsok Rinpoche",
+      "dob": "1933–2004",
+      "occupation": "Nyingma Master, Khenpo"
+    },
+    {
+      "id": "dalai-lama-14",
+      "name": "H.H. The 14th Dalai Lama (Tenzin Gyatso)",
+      "dob": "1935–Present",
+      "occupation": "Head of the Gelug School, holds all four major Tibetan Lineages"
+    },
+    {
+      "id": "namkhai-norbu",
+      "name": "Chögyal Namkhai Norbu Rinpoche",
+      "dob": "1938–2018",
+      "occupation": "Key Modern Dzogchen Master (Dzogchen Community)"
+    },
+    {
+      "id": "vajradhara",
+      "name": "Vajradhara (Dorje Chang)",
+      "dob": "Primordial",
+      "occupation": "Dharmakāya Buddha, Source of Kagyu"
+    },
+    {
+      "id": "tilopa",
+      "name": "Tilopa",
+      "dob": "988–1069",
+      "occupation": "Mahasiddha, Kagyu Founder (Human)"
+    },
+    {
+      "id": "naropa",
+      "name": "Naropa",
+      "dob": "1016–1100",
+      "occupation": "Mahasiddha, Nalanda Scholar, codified Six Yogas"
+    },
+    {
+      "id": "marpa",
+      "name": "Marpa Lotsawa (The Translator)",
+      "dob": "1012–1097",
+      "occupation": "Great Translator, Brought Kagyu to Tibet"
+    },
+    {
+      "id": "milarepa",
+      "name": "Milarepa",
+      "dob": "1040–1123",
+      "occupation": "Great Yogi, Disciple of Marpa"
+    },
+    {
+      "id": "gampopa",
+      "name": "Gampopa (Dakpo Lharje)",
+      "dob": "1079–1153",
+      "occupation": "Father of the Four Major Kagyu Schools"
+    },
+    {
+      "id": "dusum-khyenpa",
+      "name": "Düsum Khyenpa (1st Karmapa)",
+      "dob": "1110–1193",
+      "occupation": "Founder of Karma Kagyu Lineage"
+    },
+    {
+      "id": "phakmo-trupa",
+      "name": "Phakmo Trupa Dorje Gyalpo",
+      "dob": "1110–1170",
+      "occupation": "Founder of Phagdru Kagyu"
+    },
+    {
+      "id": "jigten-sumgon",
+      "name": "Jigten Sumgön (Drikung Kyopa)",
+      "dob": "1143–1217",
+      "occupation": "Founder of Drikung Kagyu"
+    },
+    {
+      "id": "drugpa-gyare",
+      "name": "Tsangpa Gyare (1st Gyalwang Drukpa)",
+      "dob": "1161–1211",
+      "occupation": "Founder of Drukpa Kagyu"
+    },
+    {
+      "id": "jamgon-kongtrul-1",
+      "name": "Jamgön Kongtrül Lodrö Thayé (The Great)",
+      "dob": "1813–1899",
+      "occupation": "Major Rime Master (Kagyu/Nyingma), Scholar"
+    },
+    {
+      "id": "virupa",
+      "name": "Mahasiddha Virūpa",
+      "dob": "9th Century",
+      "occupation": "Indian Mahasiddha, Source of Lamdré"
+    },
+    {
+      "id": "gayadhara",
+      "name": "Gayadhara",
+      "dob": "994–1043",
+      "occupation": "Indian Pandit"
+    },
+    {
+      "id": "drokmi-lotsawa",
+      "name": "Drogmi Lotsawa Shakya Yeshe",
+      "dob": "992–1072",
+      "occupation": "Tibetan Translator"
+    },
+    {
+      "id": "khon-konchog-g",
+      "name": "Khön Könchok Gyalpo",
+      "dob": "1034–1102",
+      "occupation": "Founder of Sakya Monastery/School"
+    },
+    {
+      "id": "sachen-kunga",
+      "name": "Sachen Kunga Nyingpo",
+      "dob": "1092–1158",
+      "occupation": "1st of the Five Sakya Founders"
+    },
+    {
+      "id": "sonam-tsemo",
+      "name": "Lopön Sönam Tsemo",
+      "dob": "1142–1182",
+      "occupation": "2nd of the Five Sakya Founders"
+    },
+    {
+      "id": "dragpa-gyaltsen",
+      "name": "Jetsun Dragpa Gyaltsen",
+      "dob": "1147–1216",
+      "occupation": "3rd of the Five Sakya Founders"
+    },
+    {
+      "id": "sakya-pandita",
+      "name": "Sakya Pandita Kunga Gyaltsen",
+      "dob": "1182–1251",
+      "occupation": "4th of the Five Sakya Founders, Great Scholar"
+    },
+    {
+      "id": "chogyal-phagpa",
+      "name": "Drogön Chögyal Phagpa",
+      "dob": "1235–1280",
+      "occupation": "5th of the Five Sakya Founders, Imperial Preceptor"
+    },
+    {
+      "id": "sakya-trizin-41",
+      "name": "H.H. The 41st Sakya Trizin",
+      "dob": "1945–Present",
+      "occupation": "Former Head of Sakya School"
+    },
+    {
+      "id": "atisha",
+      "name": "Atiśa Dīpaṃkara Śrījñāna",
+      "dob": "982–1054",
+      "occupation": "Indian Master, Founder of Kadampa School"
+    },
+    {
+      "id": "dromtonpa",
+      "name": "Dromtönpa Gyalwai Jungne",
+      "dob": "1004–1064",
+      "occupation": "Principal Student of Atisha, Founder of Reting Monastery"
+    },
+    {
+      "id": "tsongkhapa",
+      "name": "Je Tsongkhapa Lobzang Dragpa",
+      "dob": "1357–1419",
+      "occupation": "Founder of Gelug School"
+    },
+    {
+      "id": "khedrup-je",
+      "name": "Khedrup Gelek Pelzang (1st Panchen Lama)",
+      "dob": "1385–1438",
+      "occupation": "Disciple of Tsongkhapa, First Panchen Lama"
+    },
+    {
+      "id": "gyaltsap-je",
+      "name": "Gyaltsab Darma Rinchen",
+      "dob": "1364–1432",
+      "occupation": "Disciple of Tsongkhapa, First Ganden Tripa"
+    },
+    {
+      "id": "gendun-drup",
+      "name": "Gendun Drup (1st Dalai Lama)",
+      "dob": "1391–1474",
+      "occupation": "Disciple of Tsongkhapa, 1st Dalai Lama"
+    },
+    {
+      "id": "pabongka",
+      "name": "Pabongka Rinpoche",
+      "dob": "1878–1941",
+      "occupation": "Major Gelug Master, Great Exponent of Lamrim"
+    },
+    {
+      "id": "trijang-rinpoche",
+      "name": "Kyabje Trijang Lobsang Yeshe",
+      "dob": "1901–1981",
+      "occupation": "Junior Tutor to the 14th Dalai Lama"
+    },
+    {
+      "id": "ling-rinpoche",
+      "name": "Kyabje Ling Rinpoche",
+      "dob": "1903–1983",
+      "occupation": "Senior Tutor to the 14th Dalai Lama"
+    }
+  ],
+  "links": [
+    {
+      "source": "samantabhadra",
+      "target": "vajrasattva",
+      "transmission": "Mind Direct Transmission"
+    },
+    {
+      "source": "vajrasattva",
+      "target": "garab-dorje",
+      "transmission": "Symbolic Transmission"
+    },
+    {
+      "source": "garab-dorje",
+      "target": "manjushrimitra",
+      "transmission": "Sign Transmission"
+    },
+    {
+      "source": "manjushrimitra",
+      "target": "shri-simha",
+      "transmission": "Sign Transmission"
+    },
+    {
+      "source": "shri-simha",
+      "target": "jhanasutra",
+      "transmission": "Sign Transmission"
+    },
+    {
+      "source": "shri-simha",
+      "target": "padmasambhava",
+      "transmission": "Sign Transmission"
+    },
+    {
+      "source": "shri-simha",
+      "target": "vimalamitra",
+      "transmission": "Sign Transmission"
+    },
+    {
+      "source": "jhanasutra",
+      "target": "vimalamitra",
+      "transmission": "Sign Transmission"
+    },
+    {
+      "source": "vimalamitra",
+      "target": "vairochana",
+      "transmission": "Oral Transmission"
+    },
+    {
+      "source": "padmasambhava",
+      "target": "trisong-detsen",
+      "transmission": "Oral Transmission (Kama/Terma)"
+    },
+    {
+      "source": "padmasambhava",
+      "target": "yeshe-tsogyal",
+      "transmission": "Oral Transmission (Kama/Terma)"
+    },
+    {
+      "source": "padmasambhava",
+      "target": "nubchen-sangye",
+      "transmission": "Oral Transmission (Kama)"
+    },
+    {
+      "source": "jigme-lingpa",
+      "target": "jigme-gyalwe-nyugu",
+      "transmission": "Longchen Nyingthig Lineage"
+    },
+    {
+      "source": "jigme-gyalwe-nyugu",
+      "target": "patrul-rinpoche",
+      "transmission": "Longchen Nyingthig Lineage"
+    },
+    {
+      "source": "jigme-gyalwe-nyugu",
+      "target": "jamyang-khyentse-w",
+      "transmission": "Longchen Nyingthig Lineage"
+    },
+    {
+      "source": "patrul-rinpoche",
+      "target": "lungtok-tenpai-nyima",
+      "transmission": "Longchen Nyingthig Lineage"
+    },
+    {
+      "source": "patrul-rinpoche",
+      "target": "jamgon-mipham",
+      "transmission": "Longchen Nyingthig Lineage"
+    },
+    {
+      "source": "jamyang-khyentse-w",
+      "target": "jamgon-mipham",
+      "transmission": "Rime Movement"
+    },
+    {
+      "source": "lungtok-tenpai-nyima",
+      "target": "ngawang-palsang",
+      "transmission": "Longchen Nyingthig Lineage"
+    },
+    {
+      "source": "longchen-rabjam",
+      "target": "jigme-lingpa",
+      "transmission": "Spiritual/Visionary Transmission"
+    },
+    {
+      "source": "vajradhara",
+      "target": "tilopa",
+      "transmission": "Direct Mind Transmission"
+    },
+    {
+      "source": "tilopa",
+      "target": "naropa",
+      "transmission": "Oral Transmission"
+    },
+    {
+      "source": "naropa",
+      "target": "marpa",
+      "transmission": "Oral Transmission"
+    },
+    {
+      "source": "marpa",
+      "target": "milarepa",
+      "transmission": "Oral Transmission"
+    },
+    {
+      "source": "milarepa",
+      "target": "gampopa",
+      "transmission": "Oral Transmission"
+    },
+    {
+      "source": "gampopa",
+      "target": "dusum-khyenpa",
+      "transmission": "Four Major Kagyu Schools"
+    },
+    {
+      "source": "gampopa",
+      "target": "phakmo-trupa",
+      "transmission": "Four Major Kagyu Schools"
+    },
+    {
+      "source": "phakmo-trupa",
+      "target": "jigten-sumgon",
+      "transmission": "Eight Minor Kagyu Schools (Drikung)"
+    },
+    {
+      "source": "phakmo-trupa",
+      "target": "drugpa-gyare",
+      "transmission": "Eight Minor Kagyu Schools (Drukpa)"
+    },
+    {
+      "source": "jamyang-khyentse-w",
+      "target": "jamgon-kongtrul-1",
+      "transmission": "Rime Transmission (Nyingma/Kagyu)"
+    },
+    {
+      "source": "jamgon-kongtrul-1",
+      "target": "dilgo-khyentse",
+      "transmission": "Rime Transmission (Kagyu/Nyingma)"
+    },
+    {
+      "source": "virupa",
+      "target": "gayadhara",
+      "transmission": "Lamdré Lineage"
+    },
+    {
+      "source": "gayadhara",
+      "target": "drokmi-lotsawa",
+      "transmission": "Lamdré Lineage"
+    },
+    {
+      "source": "drokmi-lotsawa",
+      "target": "khon-konchog-g",
+      "transmission": "Lamdré Lineage"
+    },
+    {
+      "source": "khon-konchog-g",
+      "target": "sachen-kunga",
+      "transmission": "Hereditary/Oral (Five Founders)"
+    },
+    {
+      "source": "sachen-kunga",
+      "target": "sonam-tsemo",
+      "transmission": "Hereditary/Oral (Five Founders)"
+    },
+    {
+      "source": "sachen-kunga",
+      "target": "dragpa-gyaltsen",
+      "transmission": "Hereditary/Oral (Five Founders)"
+    },
+    {
+      "source": "dragpa-gyaltsen",
+      "target": "sakya-pandita",
+      "transmission": "Oral Transmission (Five Founders)"
+    },
+    {
+      "source": "sakya-pandita",
+      "target": "chogyal-phagpa",
+      "transmission": "Oral Transmission (Five Founders)"
+    },
+    {
+      "source": "atisha",
+      "target": "dromtonpa",
+      "transmission": "Kadam Lineage"
+    },
+    {
+      "source": "dromtonpa",
+      "target": "tsongkhapa",
+      "transmission": "Lamrim foundation (Kadam to Gelug)"
+    },
+    {
+      "source": "tsongkhapa",
+      "target": "khedrup-je",
+      "transmission": "Gelug Lineage (Principal Disciples)"
+    },
+    {
+      "source": "tsongkhapa",
+      "target": "gyaltsap-je",
+      "transmission": "Gelug Lineage (Principal Disciples)"
+    },
+    {
+      "source": "tsongkhapa",
+      "target": "gendun-drup",
+      "transmission": "Gelug Lineage (Principal Disciples)"
+    },
+    {
+      "source": "pabongka",
+      "target": "trijang-rinpoche",
+      "transmission": "Gelug Lineage (Lamrim/Tantra)"
+    },
+    {
+      "source": "trijang-rinpoche",
+      "target": "dalai-lama-14",
+      "transmission": "Junior Tutor"
+    },
+    {
+      "source": "ling-rinpoche",
+      "target": "dalai-lama-14",
+      "transmission": "Senior Tutor"
+    }
+  ]
+}

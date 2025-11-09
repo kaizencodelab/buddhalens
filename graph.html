@@ -106,80 +106,25 @@
     <script>
         // Lineage data (Dzogchen transmission)
         // Initial x/y added so nodes start more spread out on load
-        const nodes = [
-            {
-                id: "garab-dorje",
-                name: "Garab Dorje",
-                dob: "",
-                occupation: "",
-                location: "",
-                x: 960,
-                y: 440
-            },
-            {
-                id: "manjushrimitra",
-                name: "Master Manjushrimitra",
-                dob: "",
-                occupation: "Pandita",
-                location: "",
-                x: 960,
-                y: 540
-            },
-            {
-                id: "shri-singha",
-                name: "Shri Singha",
-                dob: "",
-                occupation: "",
-                location: "",
-                x: 960,
-                y: 640
-            },
-            {
-                id: "jhanasutra",
-                name: "Jhanasutra",
-                dob: "",
-                occupation: "",
-                location: "",
-                x: 860,
-                y: 740
-            },
-            {
-                id: "padmasambhava",
-                name: "Guru Padmasambhava",
-                dob: "",
-                occupation: "",
-                location: "",
-                x: 960,
-                y: 740
-            },
-            {
-                id: "vimalamitra",
-                name: "Vimalamitra",
-                dob: "",
-                occupation: "Principal teacher",
-                location: "",
-                x: 1060,
-                y: 740
-            },
-            {
-                id: "vairochana",
-                name: "Vairochana",
-                dob: "",
-                occupation: "",
-                location: "",
-                x: 1060,
-                y: 840
-            }
-        ];
+            // Load nodes and links from external JSON (data/lineage.json)
+            let nodes = [];
+            let links = [];
 
-        const links = [
-            { source: "garab-dorje", target: "manjushrimitra" },
-            { source: "manjushrimitra", target: "shri-singha" },
-            { source: "shri-singha", target: "jhanasutra" },
-            { source: "shri-singha", target: "padmasambhava" },
-            { source: "shri-singha", target: "vimalamitra" },
-            { source: "vimalamitra", target: "vairochana" }
-        ];
+            (async function loadData() {
+                try {
+                    const resp = await fetch('data/lineage.json');
+                    if (!resp.ok) throw new Error('Failed to load data/lineage.json: ' + resp.status);
+                    const data = await resp.json();
+                    nodes = data.nodes || [];
+                    links = data.links || [];
+                } catch (err) {
+                    console.error(err);
+                    // fallback to empty arrays
+                    nodes = [];
+                    links = [];
+                }
+
+                // after loading data, continue with the rest of the setup
 
         // Get the SVG container and create a group for zoom
         const svg = d3.select("svg");
@@ -325,6 +270,7 @@
                 .attr("x", d => d.x)
                 .attr("y", d => d.y);
         });
+        })();
     </script>
 </body>
 </html>
