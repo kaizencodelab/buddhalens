@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+            justify-content: center;
+        }
+        .graph {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .info-panel {
+            width: 300px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin-left: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .node {
+            fill: #6b6b6b;
+            stroke: #fff;
+            stroke-width: 2px;
+            cursor: pointer;
+        }
+        .node:hover {
+            fill: #000000;
+        }
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+        .hidden {
+            display: none;
+        }
+        .node-label {
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="graph">
+            <svg width="800" height="600"></svg>
+        </div>
+        <div id="info-panel" class="info-panel hidden">
+            <p><strong>Name:</strong> <span id="node-full-name"></span></p>
+        </div>
+    </div>
+    <script>
+        // Lineage data (Dzogchen transmission)
+        // Initial x/y added so nodes start more spread out on load
+        const nodes = [
+            {
+                id: "garab-dorje",
+                name: "Garab Dorje",
+                dob: "",
+                occupation: "",
+                location: "",
+                x: 160,
+                y: 140
+            },
+            {
+                id: "manjushrimitra",
+                name: "Master Manjushrimitra",
+                dob: "",
+                occupation: "Pandita",
+                location: "",
+                x: 300,
+                y: 220
+            },
+            {
+                id: "shri-singha",
+                name: "Shri Singha",
+                dob: "",
+                occupation: "",
+                location: "",
+                x: 440,
+                y: 300
+            },
+            {
+                id: "jhanasutra",
+                name: "Jhanasutra",
+                dob: "",
+                occupation: "",
+                location: "",
+                x: 600,
+                y: 200
+            },
+            {
+                id: "padmasambhava",
+                name: "Guru Padmasambhava",
+                dob: "",
+                occupation: "",
+                location: "",
+                x: 520,
+                y: 420
+            },
+            {
+                id: "vimalamitra",
+                name: "Vimalamitra",
+                dob: "",
+                occupation: "Principal teacher",
+                location: "",
+                x: 680,
+                y: 320
+            },
+            {
+                id: "vairochana",
+                name: "Vairochana",
+                dob: "",
+                occupation: "",
+                location: "",
+                x: 760,
+                y: 300
+            }
+        ];
+
+        const links = [
+            { source: "garab-dorje", target: "manjushrimitra" },
+            { source: "manjushrimitra", target: "shri-singha" },
+            { source: "shri-singha", target: "jhanasutra" },
+            { source: "shri-singha", target: "padmasambhava" },
+            { source: "shri-singha", target: "vimalamitra" },
+            { source: "vimalamitra", target: "vairochana" }
+        ];
+
+        // Create the simulation
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(140))
+            .force("charge", d3.forceManyBody().strength(-200))
+            .force("collide", d3.forceCollide(32))
+            .force("center", d3.forceCenter(400, 300));
+
+        // Get the SVG container
+        const svg = d3.select("svg");
+
+        // Add the links
+        const link = svg.append("g")
+            .selectAll("line")
+            .data(links)
+            .join("line")
+            .attr("class", "link");
+
+        // Set up drag behavior
+        const drag = d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+
+        // Add the nodes with drag behavior
+        const node = svg.append("g")
+            .selectAll("circle")
+            .data(nodes)
+            .join("circle")
+            .attr("class", "node")
+            .attr("r", 8)
+            .call(drag)
+            .on("click", showNodeInfo);
+
+        // Add labels for the nodes
+        const labels = svg.append("g")
+            .selectAll("text")
+            .data(nodes)
+            .join("text")
+            .attr("class", "node-label")
+            .text(d => d.name)
+            .attr("dx", 12)
+            .attr("dy", 4);
+
+        // Function to display node information
+        function showNodeInfo(event, d) {
+            const panel = document.getElementById("info-panel");
+            panel.classList.remove("hidden");
+            document.getElementById("node-full-name").textContent = d.name;
+        }
+
+        // Drag functions
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+        // Update positions on each tick
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            node
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y);
+                
+            labels
+                .attr("x", d => d.x)
+                .attr("y", d => d.y);
+        });
+    </script>
+</body>
+</html>

@@ -9,16 +9,59 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            background-color: white;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
             align-items: center;
         }
         img {
-            width: 400px;
+            width: 250px;
             height: auto;
+        }
+        .explore-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 14px;
+            border: 1px solid #292929;
+            background-color: #ffffff;
+            color: rgb(22, 22, 22);
+            border-radius: 100px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .explore-btn:hover {
+            transform: scale(1.02);
+        }
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
         }
     </style>
 </head>
 <body>
-    <img src="buddhalens.png" alt="Buddha Lens Logo">
+    <div class="container">
+        <img src="buddhalens.png" alt="Buddha Lens Logo">
+        <button class="explore-btn">Enter</button>
+    </div>
+
+    <script>
+        document.querySelector('.explore-btn').addEventListener('click', () => {
+            const container = document.querySelector('.container');
+            
+            // Fade out the current content
+            container.classList.add('fade-out');
+            
+            // Navigate to graph.html after fade out
+            setTimeout(() => {
+                window.location.href = 'graph.html';
+            }, 600);
+        });
+    </script>
 </body>
 </html>
