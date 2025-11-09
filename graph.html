@@ -69,6 +69,32 @@
                 1px -1px 2px white,
                 -1px -1px 2px white;
         }
+        .zoom-controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 1000;
+        }
+        .zoom-btn {
+            background: rgba(245, 245, 245, 0.95);
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            transition: all 0.2s ease;
+        }
+        .zoom-btn:hover {
+            background: rgba(230, 230, 230, 0.95);
+            transform: translateY(-1px);
+        }
+        .zoom-btn:active {
+            transform: translateY(1px);
+        }
 
         /* Mobile adjustments */
         @media (max-width: 700px) {
@@ -102,6 +128,11 @@
         </div>
         <div id="info-panel" class="info-panel hidden">
             <p><strong>Name:</strong> <span id="node-full-name"></span></p>
+        </div>
+        <div class="zoom-controls">
+            <button class="zoom-btn" onclick="resetZoom()">Reset View</button>
+            <button class="zoom-btn" onclick="zoomIn()">+</button>
+            <button class="zoom-btn" onclick="zoomOut()">−</button>
         </div>
     </div>
     <script>
@@ -182,8 +213,37 @@
             { source: "vimalamitra", target: "vairochana" }
         ];
 
-        // Get the SVG container
+        // Get the SVG container and create a group for zoom
         const svg = d3.select("svg");
+        const g = svg.append("g");
+
+        // Set up zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.2, 4])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        svg.call(zoom);
+        
+        // Zoom control functions
+        function zoomIn() {
+            svg.transition()
+                .duration(300)
+                .call(zoom.scaleBy, 1.3);
+        }
+
+        function zoomOut() {
+            svg.transition()
+                .duration(300)
+                .call(zoom.scaleBy, 0.7);
+        }
+
+        function resetZoom() {
+            svg.transition()
+                .duration(500)
+                .call(zoom.transform, d3.zoomIdentity);
+        }
 
         // Measure rendered size and set forces dynamically so layout scales on mobile
         function getSvgSize() {
@@ -222,23 +282,24 @@
         });
 
         // Add the links
-        const link = svg.append("g")
+        const link = g.append("g")
             .selectAll("line")
             .data(links)
             .join("line")
             .attr("class", "link");
 
-        // Set up drag behavior
+        // Set up drag behavior with zoom support
         const drag = d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
-            .on("end", dragended);
+            .on("end", dragended)
+            .filter(event => !event.button && !event.ctrlKey); // Allow zoom when ctrl is pressed
 
-                // Set node radius based on screen size
+        // Set node radius based on screen size
         const nodeRadius = window.innerWidth <= 700 ? 18 : 12;
 
         // Add the nodes with drag behavior
-        const node = svg.append("g")
+        const node = g.append("g")
             .selectAll("circle")
             .data(nodes)
             .join("circle")
@@ -248,16 +309,14 @@
             .on("click", showNodeInfo);
 
         // Add labels for the nodes
-        const labels = svg.append("g")
+        const labels = g.append("g")
             .selectAll("text")
             .data(nodes)
             .join("text")
             .attr("class", "node-label")
             .text(d => d.name)
             .attr("dx", 12)
-            .attr("dy", 4);
-
-        // Function to display node information
+            .attr("dy", 4);        // Function to display node information
         function showNodeInfo(event, d) {
             const panel = document.getElementById("info-panel");
             panel.classList.remove("hidden");
