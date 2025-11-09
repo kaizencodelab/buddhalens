@@ -12,6 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, sans-serif;
         }
         .container {
             display: flex;
@@ -19,11 +20,20 @@
             width: 100%;
             max-width: 1200px;
             justify-content: center;
+            gap: 20px;
         }
         .graph {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex: 1 1 auto;
+        }
+        .graph svg {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            touch-action: none; /* allow pointer drag without browser gestures */
         }
         .info-panel {
             width: 300px;
@@ -31,7 +41,7 @@
             background: #f5f5f5;
             border-radius: 8px;
             margin-left: 20px;
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
         .node {
             fill: #6b6b6b;
@@ -51,15 +61,30 @@
         }
         .node-label {
             font-size: 12px;
-            font-family: Arial, sans-serif;
             pointer-events: none;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .info-panel {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 16px;
+            }
+            .node-label {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="graph">
-            <svg width="800" height="600"></svg>
+            <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet"></svg>
         </div>
         <div id="info-panel" class="info-panel hidden">
             <p><strong>Name:</strong> <span id="node-full-name"></span></p>
@@ -143,15 +168,38 @@
             { source: "vimalamitra", target: "vairochana" }
         ];
 
-        // Create the simulation
-        const simulation = d3.forceSimulation(nodes)
-            .force("link", d3.forceLink(links).id(d => d.id).distance(140))
-            .force("charge", d3.forceManyBody().strength(-200))
-            .force("collide", d3.forceCollide(32))
-            .force("center", d3.forceCenter(400, 300));
-
         // Get the SVG container
         const svg = d3.select("svg");
+
+        // Measure rendered size and set forces dynamically so layout scales on mobile
+        function getSvgSize() {
+            const box = svg.node().getBoundingClientRect();
+            return {
+                width: box.width || 800,
+                height: box.height || 600
+            };
+        }
+
+        const initialSize = getSvgSize();
+        const initialLinkDistance = Math.max(100, Math.min(180, initialSize.width / 6));
+
+        // Create the simulation with dynamic center and link distance
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(initialLinkDistance))
+            .force("charge", d3.forceManyBody().strength(-200))
+            .force("collide", d3.forceCollide(32))
+            .force("center", d3.forceCenter(initialSize.width / 2, initialSize.height / 2));
+
+        // Keep a reference to the link force so we can update its distance on resize
+        const linkForce = simulation.force("link");
+
+        // Update forces on window resize to keep graph centered and spaced
+        window.addEventListener('resize', () => {
+            const s = getSvgSize();
+            simulation.force("center", d3.forceCenter(s.width / 2, s.height / 2));
+            if (linkForce) linkForce.distance(Math.max(80, Math.min(220, s.width / 6)));
+            simulation.alpha(0.3).restart();
+        });
 
         // Add the links
         const link = svg.append("g")
