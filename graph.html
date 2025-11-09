@@ -69,33 +69,6 @@
                 1px -1px 2px white,
                 -1px -1px 2px white;
         }
-        .zoom-controls {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            display: flex;
-            gap: 8px;
-            z-index: 1000;
-        }
-        .zoom-btn {
-            background: rgba(245, 245, 245, 0.95);
-            border: none;
-            border-radius: 8px;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-size: 16px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            backdrop-filter: blur(5px);
-            transition: all 0.2s ease;
-        }
-        .zoom-btn:hover {
-            background: rgba(230, 230, 230, 0.95);
-            transform: translateY(-1px);
-        }
-        .zoom-btn:active {
-            transform: translateY(1px);
-        }
-
         /* Mobile adjustments */
         @media (max-width: 700px) {
             .info-panel {
@@ -128,11 +101,6 @@
         </div>
         <div id="info-panel" class="info-panel hidden">
             <p><strong>Name:</strong> <span id="node-full-name"></span></p>
-        </div>
-        <div class="zoom-controls">
-            <button class="zoom-btn" onclick="resetZoom()">Reset View</button>
-            <button class="zoom-btn" onclick="zoomIn()">+</button>
-            <button class="zoom-btn" onclick="zoomOut()">−</button>
         </div>
     </div>
     <script>
