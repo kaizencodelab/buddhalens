@@ -64,6 +64,12 @@
                 window.location.href = 'home.html';
             }, 600);
         });
+
+        // Ensure the container is always visible when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            container.classList.remove('fade-out');
+        });
     </script>
 </body>
 </html>
