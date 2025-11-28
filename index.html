@@ -1,75 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Buddha Lens</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            overflow: hidden;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        img {
-            width: 250px;
-            height: auto;
-        }
-        .explore-btn {
-            margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 14px;
-            border: 1px solid #292929;
-            background-color: #ffffff;
-            color: rgb(22, 22, 22);
-            border-radius: 100px;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        .explore-btn:hover {
-            transform: scale(1.02);
-        }
-        .fade-out {
-            opacity: 0;
-            transition: opacity 0.6s ease-in-out;
-        }
-    </style>
+    <title>Buddhalens - The Definitive Lineage Map</title>
+    <link rel="stylesheet" href="/src/assets/style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+    <header>
+        <div class="logo">Buddhalens</div>
+        <nav class="nav-links">
+            <a href="login.html">Log In</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="buddhalens.png" style="width: 300px;" alt="Buddha Lens Logo">
+            <h1>The Definitive Map of Buddhist Lineages</h1>
+            <p>Track your empowerments, view authenticated lineages, and bridge historical documentation with personal
+                spiritual accountability.</p>
+            <a href="login.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
     <div class="container">
-        <img src="buddhalens.png" alt="Buddha Lens Logo">
-        <h1>Welcome to Buddhalens</h1>
-        <button class="explore-btn">Enter</button>
+        <div style="display: flex; gap: 2rem; margin-top: 4rem;">
+            <div style="flex: 1;">
+                <h3>Interactive Visualization</h3>
+                <p>Explore the unbroken succession of masters through our advanced data visualization engine.</p>
+            </div>
+            <div style="flex: 1;">
+                <h3>Track Your Path</h3>
+                <p>Keep a meticulous record of the teachings and empowerments you have received.</p>
+            </div>
+            <div style="flex: 1;">
+                <h3>Verified Sources</h3>
+                <p>All data is sourced from historical records and authenticated lineage charts.</p>
+            </div>
+        </div>
     </div>
 
-    <script>
-        document.querySelector('.explore-btn').addEventListener('click', () => {
-            const container = document.querySelector('.container');
-            
-            // Fade out the current content
-            container.classList.add('fade-out');
-            
-            // Navigate to home.html after fade out
-            setTimeout(() => {
-                window.location.href = 'home.html';
-            }, 600);
-        });
-
-        // Ensure the container is always visible when the page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.container');
-            container.classList.remove('fade-out');
-        });
-    </script>
+    <footer>
+        <p>&copy; 2025 Buddhalens. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

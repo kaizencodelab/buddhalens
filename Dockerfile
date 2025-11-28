@@ -1,11 +1,12 @@
-# Use a lightweight Nginx image as the base
+# Stage 1: Build
+FROM node:18-alpine as build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Stage 2: Serve
 FROM nginx:alpine
-
-# Copy your static website files into the Nginx default web root
-# The '.' represents the current directory where the Dockerfile is located,
-# and it expects your static website files (HTML, CSS, JS, images)
-# to be in the same directory or a subdirectory.
-COPY . /usr/share/nginx/html
-
-# Copy the custom Nginx configuration file
+COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf

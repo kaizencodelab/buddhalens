@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {
+      "id": "padmasambhava",
+      "name": "Guru Padmasambhava",
+      "dob": "8th Century",
+      "occupation": "Founder of Nyingma School"
+    },
+    {
+      "id": "yeshe-tsogyal",
+      "name": "Yeshe Tsogyal",
+      "dob": "8th Century",
+      "occupation": "Dakinī, Consort of Padmasambhava"
+    }
+  ],
+  "links": [
+    {
+      "source": "padmasambhava",
+      "target": "yeshe-tsogyal",
+      "transmission": "Oral Transmission (Kama/Terma)"
+    }
+  ]
+}
