@@ -7,11 +7,11 @@ COPY client/ .
 RUN npm run build
 
 # Stage 2: Serve
-FROM nginx:alpine
+FROM node:18-alpine AS runtime
 WORKDIR /app
-COPY --from=build /app/client/dist /usr/share/nginx/html
-# Cloud run expects the application to listen on port 8080
-# and run Nginx in the foreground
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/client/dist ./client/dist
+COPY server/package*.json ./server/
+RUN cd server && npm install --production
+COPY server/ ./server/
 EXPOSE 8080
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "server/index.js"]
