@@ -10,7 +10,8 @@ RUN npm run build
 FROM nginx:alpine
 WORKDIR /app
 COPY --from=build /app/client/dist /usr/share/nginx/html
-EXPOSE 80
-# Command to run Nginx in the foreground
-# This is crucial for Cloud Run, as it expects the main process to stay alive.
+# Cloud run expects the application to listen on port 8080
+# and run Nginx in the foreground
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
