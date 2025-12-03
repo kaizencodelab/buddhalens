@@ -11,7 +11,7 @@ npm -v
 
 ## Quick start — install dependencies
 
-From the project root run:
+From the client directory run:
 
 ```bash
 npm install
