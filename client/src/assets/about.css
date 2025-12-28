@@ -1,0 +1,23 @@
+.title {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.description {
+    max-width: 700px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.contributors {
+    display: flex;
+    
+}
+
+.names {
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    gap: 50px;
+}
