@@ -1,18 +1,3 @@
-:root {
-    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    --color-primary: #ffffff;
-    /* Dark gray/blue like Odin */
-    --color-secondary: #343434;
-    /* Light gray */
-    --color-accent: #eab308;
-    /* Gold/Yellow accent */
-    --color-text: #374151;
-    --color-bg: #ffffff;
-    --color-link: #0d1831;
-}
-* {
-    border: 1px red solid;
-}
 .title {
     text-align: center;
     margin-top: 25px;
