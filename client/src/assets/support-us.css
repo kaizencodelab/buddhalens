@@ -1,6 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;git clone git@github.com:yourusername/buddhalens.git
-
+    font-family: 'Roboto', sans-serif;
 }
 
 .support {
@@ -47,7 +46,6 @@ body {
     background-color: #555;
 }
 .donation-text {
-    font-family: 'Roboto', sans-serif; 
     font-size: 18px; 
     line-height: 1.6; 
     color: #333333; 
