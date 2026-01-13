@@ -10,10 +10,52 @@
     line-height: 1.6;
 }
 
+.team-title {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
 .contributors {
     display: flex;
-    
+    flex-wrap: wrap; /* allows multiple rows if needed */
+    justify-content: center; /* center all profiles */
+    gap: 40px; /* space between profiles */
+    margin-top: 50px;
 }
+
+.profile {
+    text-align: center;
+    max-width: 180px; /* card width */
+}
+
+.pfp {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* makes it circular */
+    margin-bottom: 10px;
+    border: 2px solid #ccc; /* optional border */
+}
+
+.profile h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 14px;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
 
 .names {
     display: flex;
