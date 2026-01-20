@@ -18,45 +18,13 @@
 
         Think of it as helping a digital garden grow: every contribution waters the roots of knowledge, keeps the site running smoothly, and allows the light of understanding to reach more hearts.
 
-        Thank you for being part of this journey—together, we are keeping education and wisdom accessible to everyone. 🌸
+        Thank you for being part of this journey—together, we are keeping education and wisdom accessible to everyone. 
     </div>
 
-    <!-- Donate Now Button -->
+    
     <div class="support-buttons">
-        <button class="btn" id="donate-now">Donate Now!</button>
+        <button class="btn" id="donate-now">Donate Now</button>
     </div>
-
-    <!-- Contribution Cards (Hidden by default) -->
-    <section class="contribution-options">
-        <div class="contribution-card one-time">
-            <h3>One-Time Donation</h3>
-            <p>Provide an immediate boost to our current projects and urgent needs.</p>
-            <form action="/donate-onetime" method="POST">
-                <input type="number" placeholder="Enter amount ($)" min="5" required>
-                <button type="submit" class="one-time-button">Donate Now</button>
-            </form>
-        </div>
-
-        <div class="contribution-card monthly">
-            <h3>Become a Sustainer</h3>
-            <p>Join our community of monthly supporters for steady, reliable impact.</p>
-            <p class="monthly-benefit"> Secure our long-term stability.</p>
-            <button class="monthly-button">Become a Monthly Supporter</button>
-        </div>
-    </section>
-
-   
-    <script>
-        const donateBtn = document.getElementById('donate-now');
-        const cards = document.querySelector('.contribution-options');
-
-        // Hide cards by default
-        cards.style.display = 'none';
-
-        donateBtn.addEventListener('click', () => {
-            cards.style.display = 'flex'; // show the cards
-            cards.scrollIntoView({ behavior: 'smooth' }); // scroll down smoothly
-        });
-    </script>
+    
 </body>
 </html>
