@@ -1,7 +1,135 @@
-body {
-
-    font-family: 'Roboto', sans-serif;
+:root {
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --color-primary: #ffffff;
+    /* Dark gray/blue like Odin */
+    --color-secondary: #343434;
+    /* Light gray */
+    --color-accent: #eab308;
+    /* Gold/Yellow accent */
+    --color-text: #374151;
+    --color-bg: #ffffff;
+    --color-link: #0d1831;
 }
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.nav-links a {
+    color: var(--color-text);
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    color: var(--color-link);
+    text-decoration: none;
+}
+.cta-button {
+    background-color: var(--color-link);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #808080;
+    text-decoration: none;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #9ca3af;
+    
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: #9ca3af;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.hero {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+img {
+    max-width: 200px;
+    height: auto;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    gap: 2rem;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #9ca3af;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.divider span {
+    padding: 0 10px;
+    font-size: 0.875rem;
+}
+
 
 .support {
     font-size: 30px;
@@ -25,7 +153,6 @@ body {
     flex-wrap: wrap;
 }
 .btn {
-    
     padding: 15px 30px;
     font-size: 16px;
     border-radius: 8px;
