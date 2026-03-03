@@ -77,6 +77,13 @@ header {
     font-weight: bold;
 }
 
+.team-title {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
 .contributors {
     display: flex;
     flex-wrap: wrap; /* allows multiple rows if needed */
