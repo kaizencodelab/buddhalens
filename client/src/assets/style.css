@@ -77,15 +77,16 @@ img {
 }
 
 .cta-button {
-    background-color: var(--color-link);
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: 1px solid #d1d5db;
     padding: 12px 32px;
     border-radius: 5px;
     transition: background-color 0.2s;
 }
 
 .cta-button:hover {
-    background-color: #808080;
+    background-color: #f3f4f6;
     text-decoration: none;
 }
 
