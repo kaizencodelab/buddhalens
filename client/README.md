@@ -1,4 +1,4 @@
-# BuddhaLens FRONTEND
+# BUDDHALENS FRONTEND
 
 ## Prerequisites
 
