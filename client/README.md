@@ -1,4 +1,4 @@
-# BuddhaLens Frontend
+# BuddhaLens FRONTEND
 
 ## Prerequisites
 
