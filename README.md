@@ -1,4 +1,4 @@
-# BUDDHALENS
+# Buddhalens
 
 ## Architecture Overview
 
