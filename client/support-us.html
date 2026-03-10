@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Us</title>   
+    <title>Support Us - Buddhalens</title>   
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- Your CSS -->
     <link rel="stylesheet" href="./src/assets/main.css">
     <link rel="stylesheet" href="src/assets/support-us.css">
 </head>
+
+<body>
+
+    <!-- Header -->
     <header>
-        <div class="logo">Buddhalens</div>
+        <div class="logo"><a href="index.html">Buddhalens</a></div>
         <nav class="nav-links">
             <a href="dashboard.html">Dashboard</a>
             <a href="./about.html">About</a>
@@ -16,31 +28,65 @@
             <a href="login.html">Log In</a>
         </nav>
     </header>
+
     <div class="divider"></div>
-<body>
-    <div class="support">Join Our Journey</div>
 
-    <p class="support-subtitle">
-        Your generosity helps us preserve and share Tibetan Buddhist teachings with our global community.
-    </p>
+    <!-- Main Section -->
+    <main class="support-container">
 
-    <div class="donation-text">
-        Every donation helps us maintain this website and continue sharing the wisdom of generations of Buddhist masters. Your support ensures that anyone, anywhere, can explore these lineages and learn from the teachings, for free.
+        <h1>Support Our Mission</h1>
 
-        Think of it as helping a digital garden grow: every contribution waters the roots of knowledge, keeps the site running smoothly, and allows the light of understanding to reach more hearts.
+        <div class="support-description">
+            <h4>Why Support Us?</h4>
+            <p>
+                Your contributions help maintain the digital archive and preserve sacred Tibetan Buddhist teachings for future generations.
+                Together, we ensure wisdom remains accessible to all.
+            </p>
+        </div>
 
-        Thank you for being part of this journey—together, we are keeping education and wisdom accessible to everyone. 
-    </div>
+        <!-- Donation Options -->
+        <div class="donation-grid">
 
-    
-    <div class="support-buttons">
-        <button class="btn" id="donate-now">Donate Now</button>
-    </div>
+            <div class="donation-card">
+                <span class="amount">$10</span>
+                <p>Support the Archive</p>
+            </div>
 
+            <div class="donation-card">
+                <span class="amount">$25</span>
+                <p>Empower the Community</p>
+            </div>
+
+            <div class="donation-card">
+                <span class="amount">$50</span>
+                <p>Preserve the Teachings</p>
+            </div>
+
+        </div>
+
+        <!-- Custom Amount -->
+        <div class="custom-donation">
+            <p>Or enter a custom amount</p>
+            <div class="input-wrapper">
+                <span>$</span>
+                <input type="number" placeholder="Enter amount">
+            </div>
+        </div>
+
+        <!-- Donate Button -->
+        <div class="support-buttons">
+            <button class="btn-donate">  
+                Donate Now
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
     <footer>
         <div class="divider"></div>
-        <p>&copy; 2025 Buddhalens. All rights reserved.</p>
+        <p>&copy; 2026 Buddhalens. All rights reserved.</p>
     </footer>
-    
+
 </body>
 </html>
