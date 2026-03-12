@@ -1,61 +1,161 @@
-.support {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
+ 
+
+/* ============================= */
+/* Main Support Layout */
+/* ============================= */
+
+
+.support-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
     text-align: center;
-    padding: 100px;
-    font-weight: bold;
 }
 
-.support-subtitle {
-    font-size: 18px;
-    max-width: 800px;
-    text-align: center;
-    color: #4b4747;
-    margin: 20px auto 40px;
+.support-container h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
+
+/* Description */
+
+.support-description h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.support-description p {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+}
+
+/* ============================= */
+/* Donation Cards */
+/* ============================= */
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.donation-card {
+    border: 1px solid #000;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.donation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.donation-card.featured {
+    border: 2px solid var(--color-accent);
+}
+
+.tier {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 12px;
+}
+
+.tier.accent {
+    color: var(--color-accent);
+}
+
+.amount {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* Custom Donation Input */
+/* ============================= */
+
+.custom-donation p {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-bottom: 15px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 18px;
+    padding: 16px 20px;
+    width: 320px;
+    margin: 16px auto;
+    background: #fff;
+}
+
+.input-wrapper span {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.input-wrapper:focus-within {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
+}
+
+/* ============================= */
+/* Donate Button */
+/* ============================= */
 
 .support-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
-.btn {
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.7s, box-shadow 0.7s ease;
-
-}
-
-.btn:hover {
-    background-color: #d0c6c6;
-}
-
-.donation-text {
-    font-size: 18px; 
-    line-height: 1.6; 
-    color: #333333; 
-    padding: 20px; 
-    margin: 20px auto; 
-    max-width: 800px; 
-    border-radius: 8px; 
-}
-.support-us-header {
-    text-align: center;
-    padding: 100px 20px 60px 20px;
+.btn-donate {
+    background: var(--color-accent);
     color: white;
-    margin-bottom: 40px;
-    margin-top: 50px;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.7s ease;
 }
+
+.btn-donate:hover {
+    background: var(--color-link);
+    transform: translateY(-2px);
+
+} 
 
 .support-us-header h1 {
     font-size: 3em;
     margin-bottom: 10px;
     letter-spacing: 1px;
+
 }
 
 .inspire-text {
@@ -65,4 +165,8 @@
     font-weight: 300;
     line-height: 1.5;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+
+}
+.logo a:hover {
+    text-decoration: none;
 }
