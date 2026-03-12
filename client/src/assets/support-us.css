@@ -1,13 +1,9 @@
-:root {
-    --color-accent: #374151;
-}
-.serif-heading {
-    font-family: 'Playfair Display', serif;
-} 
+ 
 
 /* ============================= */
 /* Main Support Layout */
 /* ============================= */
+
 
 .support-container {
     max-width: 1000px;
@@ -35,7 +31,6 @@
     max-width: 700px;
     margin: 0 auto 50px auto;
     font-size: 1.1rem;
-    color: var(--color-muted);
 }
 
 /* ============================= */
@@ -84,10 +79,6 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 15px;
-}
-
-.donation-card p {
-    color: var(--color-muted);
 }
 
 /* ============================= */
@@ -176,4 +167,6 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
 
 }
-
+.logo a:hover {
+    text-decoration: none;
+}
