@@ -27,7 +27,7 @@ if (logoutBtn) {
         e.preventDefault();
         try {
             await signOut(auth);
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         } catch (error) {
             console.error("Error signing out:", error);
         }
@@ -108,7 +108,7 @@ const simulation = d3.forceSimulation()
 // --- Main Logic ---
 async function init() {
     try {
-        const resp = await fetch('data/lineage.json');
+        const resp = await fetch('/data/lineage.json');
         graphData = await resp.json();
 
         renderList();
