@@ -1,21 +1,23 @@
-const quote = document.getElementById('quote');
-/* 
-quote.classList.add(''); 
-*/
+const quote = document.getElementById('quote-content');
 
-//This is just temporary in order to see changes
+//TODO(pwtag2): This is just temporary in order to see changes
+//Create a css class with appropriate styles
 quote.style.color = 'red';
 quote.style.padding = '20px';
 quote.style.fontSize = '1rem';
 
+//Fetches a random quote from buddha-api.com and displays it on the 'quote' element 
 async function getBuddhaQuote() {
   try {
+    // buddha-api.com blocks direct browser requests (CORS policy).
+    // corsproxy.io acts as a middleman, fetching the data on our behalf and passing it back.
     const response = await fetch(`https://corsproxy.io/?https://buddha-api.com/api/random?t=${Date.now()}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
+    //TODO(pwtag2): Replace with Ugyen-T's function
     const data = await response.json();
     quote.textContent = `"${data.text}" — ${data.byName}`;
 
@@ -24,5 +26,5 @@ async function getBuddhaQuote() {
     quote.textContent = 'Could not load quote.';
   }
 }
-
-quote.addEventListener('click', getBuddhaQuote);
+getBuddhaQuote();
+document.getElementById('quoteButton').addEventListener('click', getBuddhaQuote);
