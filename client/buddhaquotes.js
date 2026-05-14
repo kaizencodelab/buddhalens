@@ -1,10 +1,15 @@
+/**
+Formats a quote and its author into a standardized string.
+@param {string} text - The text content of the quote.
+@param {string} [author] - The name of the author of the quote.
+@returns {string} The formatted quote string (e.g., "Text" — Author).
+*/
 function formatQuote(text, author) {
-let quote;
-
-if (author) {
-    quote = author;
+  let displayauthor;
+  if (author) {
+    displayauthor = author;
   } else {
-    quote = "Anonymous";
+    displayauthor = "Anonymous";
   }
-  return `"${text}" — ${quote}`;
+  return `"${text}" — ${displayauthor}`;
 }
