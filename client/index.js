@@ -6,6 +6,16 @@ quote.style.color = 'red';
 quote.style.padding = '20px';
 quote.style.fontSize = '1rem';
 
+function formatQuote(text, author) {
+  let displayauthor;
+  if (author) {
+    displayauthor = author;
+  } else {
+    displayauthor = "Anonymous";
+  }
+  return `"${text}" — ${displayauthor}`;
+}
+
 //Fetches a random quote from buddha-api.com and displays it on the 'quote' element 
 async function getBuddhaQuote() {
   try {
@@ -19,7 +29,7 @@ async function getBuddhaQuote() {
 
     //TODO(pwtag2): Replace with Ugyen-T's function
     const data = await response.json();
-    quote.textContent = `"${data.text}" — ${data.byName}`;
+    quote.textContent = formatQuote(data.text, data.byName);
 
   } catch (error) {
     console.error("Could not fetch quote:", error);
